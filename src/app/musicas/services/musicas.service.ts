@@ -1,3 +1,4 @@
+import { Musica } from './../model/musica';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
@@ -7,10 +8,9 @@ import { HttpClient } from '@angular/common/http'
 export class MusicasService {
 
   constructor(private httpClient: HttpClient) { }
+  private readonly API = 'api/Musica';
 
   musicaList(){
-    return [
-    {_id: 1, musica: 'Vagabundo', cantor: 'Ze'}
-    ]
+    return this.httpClient.get<Musica[]>(this.API);
   }
 }

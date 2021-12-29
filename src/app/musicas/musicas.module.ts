@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MusicasRoutingModule } from './musicas-routing.module';
 import { MusicasComponent } from './musicas/musicas.component';
 import {MatTableModule} from '@angular/material/table';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {MatTableModule} from '@angular/material/table';
   imports: [
     CommonModule,
     MusicasRoutingModule,
-    MatTableModule
+    MatTableModule,
+    ScrollingModule
   ]
 })
 export class MusicasModule { }

@@ -1,6 +1,7 @@
 export interface Musica {
 
-  _id: number;
-  musica: string;
-  cantor: string;
+  idMusica: number;
+  idMusicaAlbum: number;
+  nmMusica: string;
+  nmArtista: string;
 }

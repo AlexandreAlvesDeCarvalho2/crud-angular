@@ -1,6 +1,8 @@
 import { MusicasService } from './../services/musicas.service';
 import { Component, OnInit } from '@angular/core';
 import { Musica } from '../model/musica';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-musicas',
@@ -9,8 +11,8 @@ import { Musica } from '../model/musica';
 })
 export class MusicasComponent implements OnInit {
 
-  musicas: Musica[] = [];
-  displayedColumns = ['_id','musica','cantor'];
+  musicas: Observable <Musica[]>;
+  displayedColumns = ['idMusica','idMusicaAlbum','nmMusica','nmArtista'];
 
   constructor(private musicasService: MusicasService) {
     //this.musicas = []
