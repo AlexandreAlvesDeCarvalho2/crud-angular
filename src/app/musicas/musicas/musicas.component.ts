@@ -1,3 +1,4 @@
+import { MusicasService } from './../services/musicas.service';
 import { Component, OnInit } from '@angular/core';
 import { Musica } from '../model/musica';
 
@@ -8,13 +9,12 @@ import { Musica } from '../model/musica';
 })
 export class MusicasComponent implements OnInit {
 
-  musicas: Musica[] = [
-    {_id: 1, musica: 'Vagabundo', cantor: 'Ze'}
-  ];
+  musicas: Musica[] = [];
   displayedColumns = ['_id','musica','cantor'];
 
-  constructor() {
+  constructor(private musicasService: MusicasService) {
     //this.musicas = []
+    this.musicas = this.musicasService.musicaList();
    }
 
   ngOnInit(): void {
