@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class MusicasComponent implements OnInit {
 
   musicas: Observable <Musica[]>;
-  displayedColumns = ['idMusica','idMusicaAlbum','nmMusica','nmArtista'];
+  displayedColumns = ['idMusica','nmMusica','nmArtista'];
 
   constructor(private musicasService: MusicasService) {
     //this.musicas = []
