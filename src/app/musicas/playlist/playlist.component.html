@@ -1,8 +1,9 @@
-<div class="containerMusic border">
-<h1>Musicas Disponíveis</h1>
 
+<div class="containerPlaylist border">
 
-  <table mat-table [dataSource]="musicas" class="mat-elevation-z8">
+<h1>Playlist</h1>
+
+  <table mat-table [dataSource]="playlist" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -10,8 +11,13 @@
     <!-- musica Column -->
 
     <ng-container matColumnDef="idMusica">
-      <th id="th1" mat-header-cell *matHeaderCellDef>       #       </th>
+      <th id="th1" mat-header-cell *matHeaderCellDef> # </th>
       <td mat-cell *matCellDef="let element"> {{ element.idMusica }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="idPlaylist">
+      <th id="th1" mat-header-cell *matHeaderCellDef> # </th>
+      <td mat-cell *matCellDef="let element"> {{ element.idPlaylist }} </td>
     </ng-container>
 
     <ng-container matColumnDef="nmMusica">
@@ -19,23 +25,19 @@
       <td mat-cell *matCellDef="let element"> {{ element.nmMusica }} </td>
     </ng-container>
 
-    <!-- cantor Column -->
     <ng-container matColumnDef="nmArtista">
-      <th id="th2" mat-header-cell *matHeaderCellDef> Artista </th>
+      <th id="th1" mat-header-cell *matHeaderCellDef> Artista </th>
       <td mat-cell *matCellDef="let element"> {{ element.nmArtista }} </td>
     </ng-container>
 
+
     <ng-container matColumnDef="add">
-      <th id="th2" mat-header-cell *matHeaderCellDef> add to Playlist</th>
-      <td mat-cell *matCellDef="let element"> <button (click)="addPlaylist(element.idMusica)">+</button> </td>
+      <th id="th2" mat-header-cell *matHeaderCellDef> ...</th>
+      <td mat-cell *matCellDef="let element"> <button (click)="excluirMusicPlaylist(element.idPlaylist)">-</button> </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
-
-
-  </div>
-
+</div>
 

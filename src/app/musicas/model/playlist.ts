@@ -1,7 +1,9 @@
-export interface Musica {
+export interface Playlist {
 
   idMusica: number;
-  idMusicaAlbum: number;
+  idPlaylist: number;
   nmMusica: string;
   nmArtista: string;
+
+
 }
