@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MusicasComponent } from './musicas/musicas.component';
 
-const routes: Routes = [
-  { path: '', component: MusicasComponent},
 
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
